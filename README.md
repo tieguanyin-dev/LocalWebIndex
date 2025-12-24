@@ -88,7 +88,19 @@ The script uses a breadth-first search (BFS) algorithm:
 
 ### Security Note
 
-The script disables SSL certificate verification (`verify=False`) to allow crawling of websites with self-signed certificates. Use with caution on untrusted websites.
+⚠️ **WARNING**: The script disables SSL certificate verification (`verify=False`) to allow crawling of websites with self-signed certificates. 
+
+**Important Security Considerations:**
+- This makes the connection vulnerable to man-in-the-middle (MITM) attacks
+- Only use this feature on trusted networks and websites you control
+- For production use, enable SSL verification by setting `verify=True` in the code
+- This feature is primarily intended for local development and testing environments
+
+**Recommended Usage:**
+- ✅ Local development websites with self-signed certificates
+- ✅ Internal company websites on trusted networks
+- ❌ Public websites or untrusted sources
+- ❌ Production environments without proper SSL certificates
 
 ## Limitations
 

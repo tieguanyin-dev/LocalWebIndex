@@ -112,7 +112,7 @@ if __name__ == "__main__":
     2. Calls the crawl_website function to discover all internal links
     3. Prints all discovered URLs to the console
     """
-    # Prompt the user to insert a URL
+    # Prompt the user to enter a URL
     website_url = input("Please enter the URL: ")
     
     # Call the crawl_website function with the provided URL
